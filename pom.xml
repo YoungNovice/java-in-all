@@ -12,6 +12,7 @@
         <module>java8-stream-api</module>
         <module>java8-optional-api</module>
         <module>maven-deploy</module>
+        <module>dp</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
