@@ -13,6 +13,7 @@
         <module>java8-optional-api</module>
         <module>maven-deploy</module>
         <module>dp</module>
+        <module>xml</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
