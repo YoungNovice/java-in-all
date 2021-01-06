@@ -14,6 +14,7 @@
         <module>maven-deploy</module>
         <module>dp</module>
         <module>xml</module>
+        <module>enumext</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
