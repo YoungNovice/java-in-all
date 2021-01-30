@@ -16,6 +16,7 @@
         <module>xml</module>
         <module>enumext</module>
         <module>java8-func-api</module>
+        <module>DistributedLock</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
