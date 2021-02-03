@@ -17,6 +17,7 @@
         <module>enumext</module>
         <module>java8-func-api</module>
         <module>DistributedLock</module>
+        <module>zk</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
