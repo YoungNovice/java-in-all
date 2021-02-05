@@ -1,6 +1,5 @@
 package com.yangxuan;
 
-import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -97,7 +96,7 @@ public class LockDemo1 {
     /**
      * 假设加锁成功 有了uuid 但是过期了， 那么别人就可以设置值了， 如果我们直接delete 有可能删除的是别人加的锁
      *
-     * 解决方式 过期时间和加锁用原子操作
+     * 解决方式 同lua脚本原子删除锁
      *
      * 最后一切的一切 我们都不需要自己做 用 Redisson 别人都帮忙写好了
      */
