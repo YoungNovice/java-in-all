@@ -2,7 +2,7 @@ package com.yangxuan.dcl;
 
 public class Singleton {
 
-    private volatile static Singleton instance;
+    private volatile static Singleton instance = null;
 
     private Singleton() {
     }
