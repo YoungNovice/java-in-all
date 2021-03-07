@@ -19,6 +19,8 @@
         <module>DistributedLock</module>
         <module>zk</module>
         <module>interview</module>
+        <module>DistributedTransaction</module>
+        <module>ThreadPoolExecutorTest</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
