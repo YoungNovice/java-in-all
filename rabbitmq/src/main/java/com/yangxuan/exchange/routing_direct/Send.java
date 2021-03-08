@@ -1,4 +1,4 @@
-package com.yangxuan.exchange.routing;
+package com.yangxuan.exchange.routing_direct;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

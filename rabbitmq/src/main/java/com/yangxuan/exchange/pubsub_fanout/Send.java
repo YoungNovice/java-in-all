@@ -1,4 +1,4 @@
-package com.yangxuan.exchange.pubsub;
+package com.yangxuan.exchange.pubsub_fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

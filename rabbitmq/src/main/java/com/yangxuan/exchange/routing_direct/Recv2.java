@@ -1,4 +1,4 @@
-package com.yangxuan.exchange.pubsub;
+package com.yangxuan.exchange.routing_direct;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -7,17 +7,19 @@ import com.yangxuan.util.ConnectionUtil;
 
 public class Recv2 {
 
-    private static final String QUEUE_NAME = "test_queue_pubsub_2";
-    private static final String EXCHANGE_NAME = "test_exchange_fanout";
+    private static final String QUEUE_NAME = "test_queue_direct_2";
+    private static final String EXCHANGE_NAME = "test_exchange_direct";
 
     public static void main(String[] args) throws Exception {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
 
-        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+        channel.exchangeDeclare(EXCHANGE_NAME, "direct");
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "");
 
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "update");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "delete");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "insert");
         // 同一个时刻服务器只会发送一条消息给消费者
         channel.basicQos(1);
 
