@@ -14,7 +14,7 @@ public class Recv {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
 
-        channel.exchangeDeclare(EXCHANGE_NAME, "topic   ");
+        channel.exchangeDeclare(EXCHANGE_NAME, "topic");
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "item.update");

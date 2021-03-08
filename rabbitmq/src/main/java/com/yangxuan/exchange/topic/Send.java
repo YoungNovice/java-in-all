@@ -20,15 +20,15 @@ public class Send {
         channel.exchangeDeclare(EXCHANGE_NAME, "topic");
 
         String message = "insert hello world";
-        channel.basicPublish(EXCHANGE_NAME, "insert", null, message.getBytes());
+        channel.basicPublish(EXCHANGE_NAME, "item.insert", null, message.getBytes());
         System.out.println(" [x] send '" + message + "'");
 
         message = "update hello world";
-        channel.basicPublish(EXCHANGE_NAME, "update", null, message.getBytes());
+        channel.basicPublish(EXCHANGE_NAME, "item.update", null, message.getBytes());
         System.out.println(" [x] send '" + message + "'");
 
         message = "delete hello world";
-        channel.basicPublish(EXCHANGE_NAME, "delete", null, message.getBytes());
+        channel.basicPublish(EXCHANGE_NAME, "item.delete", null, message.getBytes());
         System.out.println(" [x] send '" + message + "'");
         channel.close();
         connection.close();
