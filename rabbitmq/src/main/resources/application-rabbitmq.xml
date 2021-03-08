@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+    xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+    http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/rabbit/spring-beans-4.1.xsd">
+
+    <rabbit:connection-factory id="connectionFactory" host="127.0.0.1" port="5672" username="taotao" password="taotao" virtual-host="/taotao"/>
+    <rabbit:admin connection-factory="connectionFactory" />
+    <rabbit:topic-exchange name="TAOTAO_ITEM_EXCHANGE" auto-declare="true" durable="true" />
+    <rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" exchange="TAOTAO_ITEM_EXCHANGE"/>
+
+</beans>
