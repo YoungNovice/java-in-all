@@ -21,6 +21,7 @@
         <module>interview</module>
         <module>DistributedTransaction</module>
         <module>ThreadPoolExecutorTest</module>
+        <module>rabbitmq</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
