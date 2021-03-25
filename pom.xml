@@ -23,7 +23,7 @@
         <module>ThreadPoolExecutorTest</module>
         <module>rabbitmq</module>
         <module>work</module>
-
+        <module>redis-template</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
