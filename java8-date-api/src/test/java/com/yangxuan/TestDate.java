@@ -2,10 +2,20 @@ package com.yangxuan;
 
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
 
 public class TestDate {
+
+    @Test
+    public void SSS() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+        String datestr = format.format(new Date());
+        System.out.println(datestr);
+    }
 
     @Test
     public void now() {

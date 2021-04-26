@@ -24,6 +24,11 @@
         <module>rabbitmq</module>
         <module>work</module>
         <module>redis-template</module>
+        <module>debug-lambda</module>
+        <module>class-load</module>
+        <module>netty-pro</module>
+        <module>hystrix</module>
+        <module>gson</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
