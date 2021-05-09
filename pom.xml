@@ -29,6 +29,7 @@
         <module>netty-pro</module>
         <module>hystrix</module>
         <module>gson</module>
+        <module>ali-sentinel</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
