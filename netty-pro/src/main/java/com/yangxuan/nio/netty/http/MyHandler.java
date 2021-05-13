@@ -7,6 +7,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 
+import java.net.URI;
 import java.time.LocalDateTime;
 
 public class MyHandler extends SimpleChannelInboundHandler<HttpObject> {
@@ -18,6 +19,17 @@ public class MyHandler extends SimpleChannelInboundHandler<HttpObject> {
             System.out.println("msg 类型" + msg.getClass());
             System.out.println("客户端地址 " + LocalDateTime.now() + " -> " + ctx.channel().remoteAddress());
 
+            HttpRequest request = (HttpRequest) msg;
+            URI uri = new URI(request.uri());
+            System.out.println("uri = " + uri.getPath());
+            if ("/favicon.ico".equals(uri.getPath())) {
+                // 构造httpResponse
+                DefaultFullHttpResponse resp =
+                        new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
+                                HttpResponseStatus.NOT_FOUND);
+                ctx.writeAndFlush(resp);
+                return;
+            }
             ByteBuf buf = Unpooled.copiedBuffer("hello， 我是服务器",  CharsetUtil.UTF_8);
             // 构造httpResponse
             DefaultFullHttpResponse resp =
@@ -25,7 +37,6 @@ public class MyHandler extends SimpleChannelInboundHandler<HttpObject> {
                             HttpResponseStatus.OK, buf);
             resp.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/json;charset=UTF-8");
             resp.headers().set(HttpHeaderNames.CONTENT_LENGTH, buf.readableBytes());
-
             ctx.writeAndFlush(resp);
          }
 
