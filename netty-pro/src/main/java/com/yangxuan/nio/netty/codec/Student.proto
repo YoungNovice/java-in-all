@@ -1,0 +1,8 @@
+// protoc --java_out=. Student.proto
+syntax = "proto3";
+package com.yangxuan.nio.netty.codec;
+option java_outer_classname = "StudentPOJO";
+message Student {
+  int32 id = 1; // 1表示序号不是值
+  string name = 2;
+}
