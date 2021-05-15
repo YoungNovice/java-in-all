@@ -2,17 +2,13 @@ package com.yangxuan.nio.netty.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.ChannelPipeline;
+import io.netty.channel.*;
 import io.netty.util.CharsetUtil;
 
-public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+public class NettyServerHandler extends SimpleChannelInboundHandler<StudentPOJO.Student> {
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        StudentPOJO.Student student = (StudentPOJO.Student) msg;
+    public void channelRead0(ChannelHandlerContext ctx, StudentPOJO.Student student) throws Exception {
         System.out.println("客户端发送的数据id=" + student.getId() + "name=" + student.getName());
     }
 
