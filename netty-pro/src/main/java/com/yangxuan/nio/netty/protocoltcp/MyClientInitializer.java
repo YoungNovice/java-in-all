@@ -9,6 +9,8 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel channel) throws Exception {
         ChannelPipeline pipeline = channel.pipeline();
+        pipeline.addLast(new MyMessageEncoder());
+        pipeline.addLast(new MyMessageDecoder());
         pipeline.addLast(new MyClientHandler());
     }
 }

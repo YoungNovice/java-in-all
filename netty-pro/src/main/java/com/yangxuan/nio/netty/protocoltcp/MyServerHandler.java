@@ -9,23 +9,27 @@ import io.netty.util.CharsetUtil;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
-public class MyServerHandler extends SimpleChannelInboundHandler<ByteBuf> {
+public class MyServerHandler extends SimpleChannelInboundHandler<MessageProtocol> {
 
     private int count;
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx,
-                                ByteBuf msg) throws Exception {
-        byte[] buffer = new byte[msg.readableBytes()];
-        msg.readBytes(buffer);
+                                MessageProtocol msg) throws Exception {
 
-        String s = new String(buffer, StandardCharsets.UTF_8);
-        System.out.println("服务器接收到数据\n" + s);
-        System.out.println("count=" + (++this.count));
+        System.out.println("服务器接收到数据如下");
+        System.out.println("len=" + msg.getLen());
+        System.out.println("内容=" + new String(msg.getContent()));
+
+        System.out.println("count=" + (++count));
 
         // 回复数据
-        ByteBuf resp = Unpooled.copiedBuffer(UUID.randomUUID() + "\n", CharsetUtil.UTF_8);
-        ctx.writeAndFlush(resp);
+        byte[] respContent = (UUID.randomUUID() + "\n").getBytes(StandardCharsets.UTF_8);
+        int respLen = respContent.length;
+        MessageProtocol messageProtocol = new MessageProtocol();
+        messageProtocol.setLen(respLen);
+        messageProtocol.setContent(respContent);
+        ctx.writeAndFlush(messageProtocol);
     }
 
     @Override
