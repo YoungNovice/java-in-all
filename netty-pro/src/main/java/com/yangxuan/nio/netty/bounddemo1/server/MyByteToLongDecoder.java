@@ -11,6 +11,7 @@ public class MyByteToLongDecoder extends ByteToMessageDecoder {
     @Override
     protected void decode(ChannelHandlerContext ctx,
                           ByteBuf in, List<Object> list) throws Exception {
+        System.out.println("MyByteToLongDecoder 被调用");
         if  (in.readableBytes() >= 8) {
             list.add(in.readLong());
         }
