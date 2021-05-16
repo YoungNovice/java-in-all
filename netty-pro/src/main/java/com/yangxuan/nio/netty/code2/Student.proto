@@ -1,0 +1,30 @@
+syntax = "proto3";
+option optimize_for = SPEED;
+option java_package = "com.yangxuan.nio.netty.code2";
+option java_outer_classname = "MyDataInfo";
+
+message MyMessage {
+  enum DataType {
+    studentType = 0;
+    workType = 1;
+  }
+
+  // 用dataType 来标识传的是哪一个枚举类型
+  DataType data_type = 1;
+  // 表示每次枚举类型最多只能其中的一个
+  oneof dataBody {
+    Student student = 2;
+    Worker work = 3;
+  }
+
+}
+
+message Student {
+  int32 id = 1;
+  string name = 2;
+}
+
+message Worker {
+  string name = 1;
+  int32 age = 2;
+}
