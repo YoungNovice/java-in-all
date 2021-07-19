@@ -1,9 +1,9 @@
-package com.yangxuan.exchange.pubsub_fanout;
+package com.yangxuan.v1.exchange.pubsub_fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.QueueingConsumer;
-import com.yangxuan.util.ConnectionUtil;
+import com.yangxuan.v1.util.ConnectionUtil;
 
 public class Recv2 {
 

@@ -1,8 +1,8 @@
-package com.yangxuan.simple;
+package com.yangxuan.v1.simple;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
-import com.yangxuan.util.ConnectionUtil;
+import com.yangxuan.v1.util.ConnectionUtil;
 
 /**
  * 一个生产一个消费 不需要交换机 只用队列就可以实现

@@ -1,8 +1,8 @@
-package com.yangxuan.exchange.pubsub_fanout;
+package com.yangxuan.v1.exchange.pubsub_fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
-import com.yangxuan.util.ConnectionUtil;
+import com.yangxuan.v1.util.ConnectionUtil;
 
 /**
  * 发布订阅模式， 消息先发送到交换机 再到所有       队列

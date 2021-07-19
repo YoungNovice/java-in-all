@@ -1,9 +1,9 @@
-package com.yangxuan.exchange.routing_direct;
+package com.yangxuan.v1.exchange.routing_direct;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.QueueingConsumer;
-import com.yangxuan.util.ConnectionUtil;
+import com.yangxuan.v1.util.ConnectionUtil;
 
 public class Recv2 {
 

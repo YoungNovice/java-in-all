@@ -1,8 +1,8 @@
-package com.yangxuan.work;
+package com.yangxuan.v1.work;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
-import com.yangxuan.util.ConnectionUtil;
+import com.yangxuan.v1.util.ConnectionUtil;
 
 /**
  * 一个生产多个消费 销售靠抢， 只会被一个消费者消费

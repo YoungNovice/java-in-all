@@ -1,4 +1,4 @@
-package com.yangxuan.util;
+package com.yangxuan.v1.util;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;

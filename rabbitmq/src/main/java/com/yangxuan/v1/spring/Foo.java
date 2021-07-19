@@ -1,4 +1,4 @@
-package com.yangxuan.spring;
+package com.yangxuan.v1.spring;
 
 public class Foo {
 
