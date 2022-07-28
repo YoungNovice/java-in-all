@@ -30,6 +30,7 @@
         <module>hystrix</module>
         <module>gson</module>
         <module>ali-sentinel</module>
+        <module>lucky-draw</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
