@@ -49,6 +49,10 @@ public class Shop {
         return String.format("%s:%.2f:%s", name, price, code);
     }
 
+    public Double getPriceDouble(String product) {
+        double price = calculatePrice(product);
+        return price;
+    }
     private double calculatePrice(String product) {
         delay();
         return random.nextDouble() * product.charAt(0) + product.charAt(1);
