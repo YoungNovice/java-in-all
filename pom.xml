@@ -31,6 +31,7 @@
         <module>gson</module>
         <module>ali-sentinel</module>
         <module>lucky-draw</module>
+        <module>gc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
