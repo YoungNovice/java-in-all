@@ -12,7 +12,7 @@ public class MetaspaceDemo {
     }
 
     /**
-     * vm options -XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m
+     * vm options -XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m -XX:+HeapDumpOnOutOfMemoryError
      *
      * @param args .
      */
