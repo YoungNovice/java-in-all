@@ -41,6 +41,7 @@ public class ShopMain3 {
                 .map(future -> future.thenApply(Quote::parse))
                 .map(future -> future.thenCompose(quote -> CompletableFuture.supplyAsync(() -> Discount.applyDiscount(quote), executor)))
                 .collect(toList());
+        // thenCompose 流水线操作 第一个操作完成时， 将其结果作为参数给第二个操作
 
         return priceFutures.stream()
                 .map(CompletableFuture::join)
