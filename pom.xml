@@ -32,6 +32,7 @@
         <module>ali-sentinel</module>
         <module>lucky-draw</module>
         <module>gc</module>
+        <module>java8-CompletableFuture-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
