@@ -8,6 +8,8 @@ import java.util.concurrent.ExecutionException;
 /**
  * join()与get()区别在于join()返回计算的结果或者抛出一个unchecked异常(CompletionException)，而get()  返回一个具体的异常
  * get()  可以指定超时时间
+ *
+ * https://juejin.cn/post/7120139020394315790
  */
 public class AllOfAnyOf {
 
