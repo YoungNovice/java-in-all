@@ -10,6 +10,7 @@ import java.util.concurrent.ExecutionException;
  * get()  可以指定超时时间
  *
  * https://juejin.cn/post/7120139020394315790
+ * https://blog.csdn.net/qq_31865983/article/details/106137777
  */
 public class AllOfAnyOf {
 
