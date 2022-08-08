@@ -12,6 +12,14 @@ public final class T {
         }
     }
 
+    public static void milli(int millisecond) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(millisecond);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void wrap(Runnable runnable) {
         long start = System.nanoTime();
         runnable.run();
