@@ -33,6 +33,7 @@
         <module>lucky-draw</module>
         <module>gc</module>
         <module>java8-CompletableFuture-api</module>
+        <module>generic</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
