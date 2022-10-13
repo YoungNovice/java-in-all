@@ -73,8 +73,8 @@ public class PECS1 {
         Plate<? extends Fruit> p = new Plate<>(new Apple());
 
         //存入元素操作都会报错
-        p.set(new Fruit()); //error
-        p.set(new Apple()); //error
+        // p.set(new Fruit()); //error
+        // p.set(new Apple()); //error
 
         //读元素操作只能放在Fruit或它的基类中
         // 他能确定是一个Fruit 自动转型机制那么一定可以是Fruit的父类 但是是不是Apple不能确定
@@ -83,7 +83,7 @@ public class PECS1 {
         Object newFruit2 = p.get();
 
         //这样取会报错
-        Apple newFruit3 = p.get(); //Error
+        // Apple newFruit3 = p.get(); //Error
     }
 
     /**
@@ -104,8 +104,8 @@ public class PECS1 {
         p.set(new Apple());
 
         //读取出来的东西只能存放在Object类里
-        Apple newFruit3 = p.get(); //error
-        Fruit newFruit1 = p.get(); //error
+        // Apple newFruit3 = p.get(); //error
+        // Fruit newFruit1 = p.get(); //error
 
         Object newFruit2 = p.get();
     }
