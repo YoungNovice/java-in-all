@@ -2,7 +2,6 @@ package com.yangxuan.c2;
 
 /**
  * https://juejin.cn/post/6875510280898478088
- * 现在PESC原则（Producer Extends Consumer Super），就很好理解了。
  * <p>
  * 频繁往外读取内容的适合：上界通配符<? extends T>
  * 频繁往里插入的，设立：下界通配符<? super T>
@@ -10,13 +9,12 @@ package com.yangxuan.c2;
 public class PECS1 {
 
     public static void main(String[] args) {
+        // super T [Object, T]
+        // extend T [T, Child]
     }
 
     public static void a() {
-        // super T [Object, T]
-        // extend T [T, Child]
-        // Plate<? extends Fruit> p = new Plate<Apple>(new Apple()); // error
-
+        //Plate<Fruit> p = new Plate<Apple>(new Apple()); // error
         /*
          报错
          * 编译器认定的逻辑是这样的：
@@ -75,6 +73,7 @@ public class PECS1 {
         //存入元素操作都会报错
         // p.set(new Fruit()); //error
         // p.set(new Apple()); //error
+        // p.set(new Object()); // error
 
         //读元素操作只能放在Fruit或它的基类中
         // 他能确定是一个Fruit 自动转型机制那么一定可以是Fruit的父类 但是是不是Apple不能确定
