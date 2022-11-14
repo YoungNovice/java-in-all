@@ -3,12 +3,12 @@ package com.yangxuan.csdn1;
 public class Connection implements AutoCloseable {
 
     public void sendData() {
-        System.out.println("正在发送数据");
+        throw new RuntimeException("send data");
     }
 
     @Override
     public void close() throws Exception {
-        System.out.println("正在关闭连接");
+        throw new RuntimeException("close");
     }
 
 }
