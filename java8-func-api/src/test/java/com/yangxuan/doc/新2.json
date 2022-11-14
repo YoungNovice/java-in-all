@@ -1,0 +1,57 @@
+{
+  "ESB": {
+    "DATA": {
+      "DATAINFOS": {
+        "DATAINFO": [
+          {
+            "CODE": "S022159",
+            "DESC1": "测试推送带银行再推",
+            "DESC11": "2",
+            "DESC16": "999995999988888",
+            "DESC23": "林云四",
+            "DESC3": "5",
+            "DESC4": "yx01",
+            "DESC6": "",
+            "DESC7": "",
+            "DESC9": "linyun5",
+            "MULTICODE": {
+              "VALUELIST": [
+                {
+                  "DESC1": "2343242432343254353453543543",
+                  "DESC13": "2",
+                  "DESC2": "测试推送带银行",
+                  "DESC25": "中国银行股份有限公司广州开发区分行",
+                  "DESC3": "KH003429",
+                  "DESC4": "10458101401002",
+                  "DESC5": "广东省",
+                  "DESC6": "广州市",
+                  "DESC8": "LB000001",
+                  "DESC9": "0",
+                  "LISTCODE": "29225467",
+                  "SPECIALITYCODE": "B01"
+                },
+                {
+                  "DESC1": "林云芝四",
+                  "DESC2": "13655443788",
+                  "DESC5": "中国",
+                  "LISTCODE": "29225468",
+                  "SPECIALITYCODE": "C01"
+                }
+              ]
+            },
+            "UUID": "B8A71107696248CC8BB364359C4C9B2A"
+          }
+        ],
+        "PUUID": "C5D2D030C8564BB0BF330750A5AADC9F"
+      },
+      "SPLITPAGE": {
+        "COUNTPERPAGE": "10",
+        "CURRENTPAGE": "1",
+        "TOTALNUMBER": "1",
+        "TOTALPAGES": "1"
+      }
+    },
+    "DESC": "成功查询到1条数据！",
+    "RESULT": "S"
+  }
+}

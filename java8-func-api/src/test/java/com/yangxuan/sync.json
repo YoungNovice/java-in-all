@@ -1,0 +1,60 @@
+{
+  "ESB": {
+    "DATA": {
+      "DATAINFOS": {
+        "DATAINFO": [
+          {
+            "CODE": null,
+            "DESC1": "测试推送2",
+            "DESC11": "2",
+            "DESC24": "NC57供应链",
+            "DESC16": "999993122342445",
+            "DESC3": "5",
+            "DESC4": "yx01",
+            "DESC6": null,
+            "DESC7": null,
+            "DESC9": "514565376",
+            "DESC23": "杨选",
+            "DESC33": "1003",
+            "FILESTR": [],
+            "MULTICODE": {
+              "VALUELIST": [
+                {
+                  "DESC1": null,
+                  "DESC2": "测试推送2",
+                  "DESC3": null,
+                  "DESC4": null,
+                  "DESC5": null,
+                  "DESC6": null,
+                  "DESC8": null,
+                  "DESC9": "0",
+                  "DESC25": null,
+                  "specialitycode": "B01"
+                },
+                {
+                  "DESC1": "杨选2",
+                  "DESC2": "13419521234",
+                  "DESC3": null,
+                  "DESC4": null,
+                  "DESC5": "中国",
+                  "DESC6": null,
+                  "DESC8": null,
+                  "DESC9": null,
+                  "DESC25": null,
+                  "specialitycode": "C01"
+                }
+              ]
+            },
+            "UUID": "67eb8328-4943-4357-b1c3-96f04a11ed19"
+          }
+        ],
+        "PUUID": "957b1b7d-e348-4100-bcd2-29a9845b3d8b",
+        "SYNCODE": null
+      },
+      "SPLITPAGE": {
+        "COUNTPERPAGE": "10",
+        "CURRENTPAGE": "1"
+      }
+    }
+  }
+}
