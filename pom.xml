@@ -35,6 +35,7 @@
         <module>java8-CompletableFuture-api</module>
         <module>generic</module>
         <module>try-with-resource</module>
+        <module>pipe-simple</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
